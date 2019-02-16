@@ -5,11 +5,13 @@ npm install --save express body -p
 Для запуска сервера выполни node server
 
 Ну ты днище. зачем мне куда-то ложить server.js?
-и что сложно было закомитить и запушить package.json + package.lock?(нехватало cors модуля)
+и что сложно было закомитить и запушить package.json + package.lock?(нехватало cors модуля, ReqExp is not defined)
 .gitignore юзай файл
 Вот как должен выглядень нормальный readme:
 npm i
 node server
 
 
-кароче мне впадлу смотреть че-то и фиксить ошибки всякие на бекенде(с post, put). В пут ты почему-то всех героев кидадаешь на бекенд.
+кароче мне впадлу смотреть че-то и фиксить ошибки всякие на бекенде("Cannot set headers after they are sent to the client") 
+Пофиксил я твой корявый бекенд тоже.
+

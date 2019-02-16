@@ -25,14 +25,15 @@ app.listen(PORT, function () {
 });
 
 app.get('/get', function (req, res) {
-  if (req.body.id) {
-    res.send(heroes.find(hero => hero.id === req.body.id));
-  }
-  else if (req.body.name) {
-    res.send(heroes.filter(hero => hero.name.match(new ReqExp(req.body.name))));
-  }
-  else {
-    res.send(heroes);
+  //тут не body надо получать
+  console.log(req.query.id);
+  if (req.query.id) {
+    //parseInt юзай
+    res.status(200).send(heroes.find(hero => hero.id === parseInt(req.query.id));
+  } else if (req.query.name) {
+    res.status(200).send(heroes.filter(hero => hero.name.match(new ReqExp(req.query.name))));
+  } else {
+    res.status(200).send(heroes);
   }
   res.status(404).send({'message': 'not found. 404'});
 });
